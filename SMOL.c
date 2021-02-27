@@ -1,27 +1,21 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int main(void) {
-    int t,i,c;
-    int a[100000000];
-    scanf("%d",&t);
+int main() {
+    int t,a,b;
+    cin>>t;
     while(t--){
-        
-        for(i=0;i<10;i++){
-            scanf("%d",&a[i]);
+        cin>>a>>b;
+        if(a<b){
+            cout<<a<<"\n";
         }
-        
-        scanf("%d",&c);
-        
-        for(i=9;i>=0;i--){
-            c=c-a[i];
-            if(c<0){
-                printf("%d\n",(i+1));
-                break;
-            }
+        else{
+            do{
+                a=a-b;
+            }while(a>=b);
+            cout<<a<<"\n";
         }
-        
     }
 	// your code goes here
 	return 0;
 }
-
